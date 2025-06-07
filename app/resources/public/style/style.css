@@ -1,0 +1,154 @@
+:root {
+    --background: #282A36;
+    --current-line: #44475A;
+    --foreground: #F8F8F2;
+    --comment: #6272a4;
+    --cyan: #8BE9FD;
+    --green: #50FA7B;
+    --orange: #FFB86C;
+    --pink: #FF79C6;
+    --purple: #BD93F9;
+    --red: #FF5555;
+    --yellow: #F1FA8C;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    margin: 0;
+    min-height: calc(100vh - 16px);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    margin: 8px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header > div {
+    font-weight: bold;
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+footer {
+    margin: 8px;
+}
+
+a {
+    color: var(--orange);
+}
+
+p {
+    color: var(--foreground);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    color: var(--purple);
+}
+
+h3 {
+    color: var(--foreground);
+}
+
+pre, code {
+    background-color: var(--current-line);
+    padding: 2px;
+    border-radius: 4px;
+}
+
+main {
+    flex-grow: 1;
+    align-self: center;
+    width: 100%;
+}
+
+main.blog {
+    width: 700px;
+    max-width: calc(100vw - 32px);
+}
+
+article.blog-teaser {
+    /* background-color: var(--current-line); */
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-radius: 4px;
+    margin: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-list {
+    padding: 0;
+}
+
+.blog-item {
+    list-style: none;
+}
+
+.blog-tags > a {
+    font-size: 14px;
+    color: var(--orange);
+}
+
+h4, .blog-date {
+    font-size: 14px;
+    color: var(--pink);
+}
+
+.blog-title {
+    text-decoration: none;
+    color: var(--foreground);
+    font-size: 20px;
+    padding: 8px 0;
+}
+
+.blog-tags > a:not(:first-child) {
+    padding-left: 8px;
+}
+
+nav > ul {
+    padding: 0;
+    margin: 0;
+}
+
+nav > ul > li {
+    list-style-type: none;
+    display: inline;
+    margin-left: 16px;
+    font-size: 18px;
+}
+
+.org-ul > li::marker {
+    color: var(--pink);
+}
+
+nav > ul > li > a {
+    color: var(--foreground);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* org export classes */
+.org-src-container {
+    background-color: var(--current-line);
+    border-radius: 4px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+#postamble {
+    display: none;
+}

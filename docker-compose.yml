@@ -1,0 +1,11 @@
+services:
+  prod:
+    build: .
+    container_name: site-rwh-prod
+    command: java -jar app-standalone.jar
+    # restart: always
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/target
+
